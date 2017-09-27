@@ -1,5 +1,7 @@
 package attendance;
 
+import java.util.Scanner;
+
 public class AttendanceApp {
 
 
