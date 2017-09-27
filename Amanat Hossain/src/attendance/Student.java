@@ -1,9 +1,12 @@
 package attendance;
 
 public class Student implements Attendee {
+	private static final String first = null;
+	private static final String last = null;
 	private boolean here;
-	
-	public Student() {
+	private String firstName = this.first;
+	private String lastName = this.last;
+	public Student(String firstName, String lastName) {
 		
 	}
 
@@ -29,12 +32,12 @@ public class Student implements Attendee {
 
 	
 	public String getFirstName() {
-		
+		return firstName;
 	}
 
 	
 	public String getLastName() {
-		
+		return lastName;
 	}
 
 	
@@ -49,7 +52,11 @@ public class Student implements Attendee {
 
 	
 	public String getReportString() {
-		
+		String line = lastName;
+		if(lastName.length() < 20 && first.length() < 20) {
+			line = lastName.substring(0,17) + ("...") + first.substring(0,17) + ("...") + isPresent();
+		}
+		return line;
 	}
 
 }
