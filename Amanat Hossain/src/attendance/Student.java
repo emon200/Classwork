@@ -1,22 +1,24 @@
 package attendance;
 
 public class Student implements Attendee {
-	private boolean here;
+	private boolean present;
 	private String firstName;
 	private String lastName;
-	public Student(String first, String last) {
-		this.firstName = first;
-		this.lastName = last;
+	
+	public Student(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		present = false;
 	}
 
 	
 	public boolean isPresent() {
-		return here;
+		return present;
 	}
 
 	
 	public void setPresent(boolean present) {
-		this.here = present;
+		this.present = present;
 	}
 
 	
