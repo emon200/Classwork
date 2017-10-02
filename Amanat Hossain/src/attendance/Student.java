@@ -33,27 +33,19 @@ public class Student implements Attendee {
 
 	
 	public boolean mathces(String first, String last) {
-		if(first.toLowerCase().equals(firstName.toLowerCase())) {
-			if(last.toLowerCase().equals(lastName.toLowerCase())) {
-				return true;
-			}
-		}
-		return false;
+		return first.toLowerCase().equals(firstName.toLowerCase()) && last.toLowerCase().equals(lastName.toLowerCase());
 	}
 
 	
 	public boolean matches(String last) {
-		if(last.toLowerCase().equals(lastName.toLowerCase())) {
-			return true;
-		}
-			return false;
+		return last.toLowerCase().equals(lastName.toLowerCase());
 	}
 
 	
 	public String getReportString() {
 		String line = lastName;
-		if(lastName.length() < 20 && firstName.length() < 20) {
-			line = lastName.substring(0,17) + ("...") + firstName.substring(0,17) + ("...") + isPresent();
+		if(lastName.length() > 20 && firstName.length() > 20) {
+			line = lastName.substring(0,17) + ("...") + firstName.substring(0,17) + ("...") + isPresent() + "\n";
 		}
 		return line;
 	}
