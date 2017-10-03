@@ -44,10 +44,17 @@ public class Student implements Attendee {
 	
 	public String getReportString() {
 		String line = lastName;
-		if(lastName.length() > 20 && firstName.length() > 20) {
-			line = lastName.substring(0,17) + ("...") + firstName.substring(0,17) + ("...") + isPresent() + "\n";
+		while(line.length() < 20){
+		line += " ";
 		}
-		return line;
-	}
-
+		while(line.length() < 40){
+		line += " ";
+		}
+		if(isPresent()){
+			line += "Present";
+		}
+		else{
+			return line;
+		}
+		
 }
