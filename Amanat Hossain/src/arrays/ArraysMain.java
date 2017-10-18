@@ -59,10 +59,10 @@ public class ArraysMain {
 	 * @return
 	 */
 	public int[] longestConsecSeqAndPos(int[] arr) {
-		diceRoll(2);
-		longestConsecutiveSequence(arr);
-		int[] data = new int[2];
-		return data;
+		int[] output = new int [longestConsecutiveSequence(arr)];
+		for(int i = 0; i<arr.length;i++) {
+			
+		}
 	}
 
 	/**
